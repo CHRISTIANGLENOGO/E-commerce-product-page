@@ -1,17 +1,15 @@
-//Primary Color
-$orange: hsl(26, 100%, 55%);
-$paleOrange: hsl(25, 100%, 94%);
-
-//Neutral
-$veryVarkBlue: hsl(220, 13%, 13%);
-$darkGrayishBlue: hsl(219, 9%, 45%);
-$GrayishBlue: hsl(220, 14%, 75%);
-$LightGrayishBlue: hsl(223, 64%, 98%);
-$White: hsl(0, 0%, 100%);
-$Black: hsl(0, 0%, 0%); //with 75% opacity for lightbox background
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap");
+@import "variable";
+@import "header";
+@import "content";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-weight: 400;
 }
