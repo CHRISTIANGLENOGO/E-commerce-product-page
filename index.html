@@ -19,9 +19,15 @@
 <body>
   <header>
     <!-- Header Area-->
-    <nav>
-      <div class="hamburger"><img src="images/icon-menu.svg" alt="menu"></div>
-      <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+    <nav class="header-nav">
+
+      <div class="leftHeader">
+        <div class="hamburger">
+          <img src="images/icon-menu.svg" alt="menu">
+        </div>
+      <div class="logo">
+        <img src="images/logo.svg" alt="logo">
+      </div>
       <div class="links-container">
         <ul class="links">
           <li><a href="#">Collection</a></li>
@@ -31,11 +37,22 @@
           <li><a href="#">Contact</a></li>
         </ul>
       </div>
-      <div class="cart"><img src="images/icon-cart.svg" alt="cart"></div>
-      <div class="avatar"><img src="images/image-avatar.png" alt="avatar"></div>
+
+      </div>
+      <div class="rightHeader">
+        <div class="cart"><img src="images/icon-cart.svg" alt="cart"></div>
+        <div class="avatar"><img src="images/image-avatar.png" alt="avatar"></div>  
+      </div>
     </nav>
   </header>
-
+  <nav class="mobile-nav">
+    <img id="close" src="/images/icon-close.svg" alt="close">
+    <a href="#">Collection</a>
+    <a href="#">Men</a>
+    <a href="#">Women</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
   <main>
     <div class="container">
       <!-- Product Images and thumbnails -->
@@ -99,6 +116,6 @@
     Coded by <a href="#">Christian Glenogo</a>.
   </div>
 
-  <script src=""></script>
+  <script src="/js/app.js"></script>
 </body>
 </html>
