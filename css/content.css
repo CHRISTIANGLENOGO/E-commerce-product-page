@@ -15,8 +15,12 @@
   overflow: hidden;
 }
 
-.product-images img {
+.product-images .images {
   width: 100%;
+}
+
+.product-images .active {
+  display: inline-block;
 }
 
 .arrowBtn {

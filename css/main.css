@@ -55,6 +55,7 @@ header {
 
 #close {
   margin: 1rem 0 2rem 35%;
+  transition: all 0.5s ease-out;
 }
 
 .mobile-nav a {
@@ -83,8 +84,12 @@ header {
   overflow: hidden;
 }
 
-.product-images img {
+.product-images .images {
   width: 100%;
+}
+
+.product-images .active {
+  display: inline-block;
 }
 
 .arrowBtn {

@@ -16,8 +16,13 @@
   width: 100%;
   overflow: hidden;
 
-  img {
+  .images {
     width: 100%;
+    // display: none;
+  }
+
+  .active {
+    display: inline-block;
   }
 }
 
