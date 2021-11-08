@@ -21,7 +21,6 @@ const images = document.querySelectorAll(".images");
 const thumbnails = document.querySelectorAll(".thumbnails");
 const previous = document.querySelector("#previous");
 const next = document.querySelector("#next");
-const arrow = document.querySelectorAll(".arrow");
 
 previous.addEventListener('click', () => {
     slider(-1);
@@ -49,3 +48,30 @@ function show(n) {
     }
     images[slide - 1].style.display = "block";
 }
+
+//Add to cart
+const minus = document.querySelector("#minus");
+const plus = document.querySelector("#plus");
+const counter = document.querySelector("#counter");
+const itemQty = document.querySelector(".itemQty");
+const addToCart = document.querySelector(".addToCart");
+
+let count = 0;
+
+function addCart(qty){
+    counter.innerText = qty;
+    itemQty.innerText = qty;
+}
+
+plus.addEventListener('click', () => {
+    addCart(count++);
+    console.log(count);
+});
+
+minus.addEventListener('click', () => {
+    addCart(count--);
+    if(count <= 1){
+        count = 0;
+    }
+    console.log(count);
+});
