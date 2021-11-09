@@ -55,6 +55,8 @@ const plus = document.querySelector("#plus");
 const counter = document.querySelector("#counter");
 const itemQty = document.querySelector(".itemQty");
 const addToCart = document.querySelector(".addToCart");
+const cart = document.querySelector(".cart");
+const cartList = document.querySelector(".cartContainer");
 
 let count = 0;
 
@@ -65,7 +67,6 @@ function addCart(qty){
 
 plus.addEventListener('click', () => {
     addCart(count++);
-    console.log(count);
 });
 
 minus.addEventListener('click', () => {
@@ -73,5 +74,15 @@ minus.addEventListener('click', () => {
     if(count <= 1){
         count = 0;
     }
-    console.log(count);
+});
+
+let cartIcon = false;
+cart.addEventListener('click', () => {
+    if(!cartIcon){
+        cartList.style.display = "block";
+        cartIcon = true;
+    }else {
+        cartList.style.display = "none";
+        cartIcon = false;
+    }
 });

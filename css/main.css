@@ -90,7 +90,7 @@ header {
 }
 
 .cartContainer {
-  display: block;
+  display: none;
   position: fixed;
   background-color: white;
   min-height: 250px;
