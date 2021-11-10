@@ -74,6 +74,11 @@
 .empty {
   padding-top: 25%;
   text-align: center;
+  color: $darkGrayishBlue;
+  font-weight: 700;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .productImgContainer {
@@ -86,6 +91,7 @@
   flex-direction: row;
   width: 100%;
   overflow: hidden;
+  height: 300px;
 
   .images {
     width: 100%;

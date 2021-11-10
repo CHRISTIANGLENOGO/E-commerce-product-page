@@ -157,6 +157,11 @@ header {
 .empty {
   padding-top: 25%;
   text-align: center;
+  color: #68707d;
+  font-weight: 700;
+  margin: auto;
+  display: flex;
+  justify-content: center;
 }
 
 .productImgContainer {
@@ -169,6 +174,7 @@ header {
   flex-direction: row;
   width: 100%;
   overflow: hidden;
+  height: 300px;
 }
 
 .product-images .images {

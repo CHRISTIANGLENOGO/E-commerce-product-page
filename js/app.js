@@ -54,15 +54,16 @@ const minus = document.querySelector("#minus");
 const plus = document.querySelector("#plus");
 const counter = document.querySelector("#counter");
 const itemQty = document.querySelector(".itemQty");
-const addToCart = document.querySelector(".addToCart");
+const addToCartBtn = document.querySelector(".addToCart");
 const cart = document.querySelector(".cart");
 const cartList = document.querySelector(".cartContainer");
 
 let count = 0;
+let totalQty;
 
 function addCart(qty){
-    counter.innerText = qty;
-    itemQty.innerText = qty;
+    totalQty = qty;
+    counter.innerText = totalQty;
 }
 
 plus.addEventListener('click', () => {
@@ -86,3 +87,32 @@ cart.addEventListener('click', () => {
         cartIcon = false;
     }
 });
+
+addToCartBtn.addEventListener('click', () => {
+    addList();
+});
+
+function addList () {
+    itemQty.innerText = totalQty;
+    counter.innerText = 0;
+    //
+
+    //add div
+    const item = document.querySelector('.items');
+    item.style.display = "flex";
+
+    //Hide "your cart is empty"
+    empty.style.display = "none";
+}
+
+const empty = document.querySelector(".empty");
+const deleteBtn = document.querySelector(".delete");
+const checkoutBtn = document.querySelector(".checkout");
+
+deleteBtn.addEventListener('click', deleteCart);
+
+function deleteCart(){
+    deleteBtn.parentElement.remove();
+    checkoutBtn.style.display = "none";
+    empty.style.display = "flex";
+}
