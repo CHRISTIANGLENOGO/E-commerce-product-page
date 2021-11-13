@@ -79,8 +79,8 @@ minus.addEventListener('click', () => {
 
 let cartIcon = false;
 cart.addEventListener('click', () => {
+    cartList.style.display = "block";
     if(!cartIcon){
-        cartList.style.display = "block";
         cartIcon = true;
     }else {
         cartList.style.display = "none";
@@ -113,6 +113,8 @@ deleteBtn.addEventListener('click', deleteCart);
 
 function deleteCart(){
     deleteBtn.parentElement.remove();
-    checkoutBtn.style.display = "none";
+    checkoutBtn.remove();
     empty.style.display = "flex";
 }
+
+

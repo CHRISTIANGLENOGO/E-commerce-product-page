@@ -79,6 +79,7 @@
   margin: auto;
   display: flex;
   justify-content: center;
+  top: calc((100% - 3rem) / 2);
 }
 
 .productImgContainer {
@@ -91,7 +92,6 @@
   flex-direction: row;
   width: 100%;
   overflow: hidden;
-  height: 300px;
 
   .images {
     width: 100%;

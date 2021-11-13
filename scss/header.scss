@@ -13,6 +13,7 @@ header {
 }
 
 .hamburger {
+  display: flex;
   padding-right: 1rem;
 }
 
@@ -23,7 +24,7 @@ header {
   align-items: center;
 }
 
-.links {
+.link-container {
   display: none;
 }
 

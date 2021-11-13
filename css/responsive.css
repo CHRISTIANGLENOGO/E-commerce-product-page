@@ -1,0 +1,42 @@
+@media screen and (min-width: 768px) {
+  header {
+    border-bottom: 1px solid #b6bcc8;
+  }
+  .hamburger {
+    display: none;
+  }
+  .link-container {
+    display: flex;
+  }
+  .link-container .links {
+    display: flex;
+    list-style: none;
+  }
+  .link-container .links li {
+    padding-left: 1rem;
+  }
+  .link-container .links li a {
+    text-decoration: none;
+    color: #68707d;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .logo {
+    padding: 2rem;
+  }
+  .container {
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  .images-container {
+    border-radius: 10px;
+    width: 50%;
+    overflow: hidden;
+    padding: 1rem;
+  }
+  .product-details {
+    width: 50%;
+    padding: 1rem;
+  }
+}

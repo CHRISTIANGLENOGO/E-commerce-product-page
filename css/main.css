@@ -12,6 +12,7 @@ header {
 }
 
 .hamburger {
+  display: flex;
   padding-right: 1rem;
 }
 
@@ -22,7 +23,7 @@ header {
   align-items: center;
 }
 
-.links {
+.link-container {
   display: none;
 }
 
@@ -162,6 +163,7 @@ header {
   margin: auto;
   display: flex;
   justify-content: center;
+  top: calc((100% - 3rem) / 2);
 }
 
 .productImgContainer {
@@ -174,7 +176,6 @@ header {
   flex-direction: row;
   width: 100%;
   overflow: hidden;
-  height: 300px;
 }
 
 .product-images .images {
@@ -288,6 +289,49 @@ header {
   fill: currentColor;
   color: white;
   padding: 0 0.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    border-bottom: 1px solid #b6bcc8;
+  }
+  .hamburger {
+    display: none;
+  }
+  .link-container {
+    display: flex;
+  }
+  .link-container .links {
+    display: flex;
+    list-style: none;
+  }
+  .link-container .links li {
+    padding-left: 1rem;
+  }
+  .link-container .links li a {
+    text-decoration: none;
+    color: #68707d;
+  }
+  .mobile-nav {
+    display: none;
+  }
+  .logo {
+    padding: 2rem;
+  }
+  .container {
+    margin-top: 2rem;
+    flex-direction: row;
+  }
+  .images-container {
+    border-radius: 10px;
+    width: 50%;
+    overflow: hidden;
+    padding: 1rem;
+  }
+  .product-details {
+    width: 50%;
+    padding: 1rem;
+  }
 }
 
 * {
