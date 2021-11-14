@@ -23,6 +23,14 @@
           text-decoration: none;
           color: $darkGrayishBlue;
         }
+
+        a::after {
+          content: "";
+          width: 100%;
+          height: 2px;
+          display: block;
+          background-color: $orange;
+        }
       }
     }
   }
@@ -46,7 +54,39 @@
     overflow: hidden;
     padding: 1rem;
 
-    .product-img {
+    .product-images {
+      border-radius: 10px;
+      width: 350px;
+      height: 350px;
+    }
+
+    .arrowBtn {
+      display: none;
+    }
+
+    .images-thumbnails {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 1.5rem;
+      width: 350px;
+
+      .thumbnails {
+        width: 69px;
+        height: 69px;
+        border-radius: 10px;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .thumbnails_active {
+        border: 2px solid $orange;
+        opacity: 0.3;
+      }
     }
   }
 

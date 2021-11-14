@@ -43,12 +43,18 @@ header {
 }
 
 .avatar {
-  padding-left: 1rem;
+  margin-left: 1rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
 }
 
 .avatar img {
-  width: 2rem;
-  height: 2rem;
+  width: 100%;
+}
+
+.avatar:hover {
+  border: 2px solid #ff7d1a;
 }
 
 .mobile-nav {

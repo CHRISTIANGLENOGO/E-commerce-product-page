@@ -29,6 +29,12 @@ next.addEventListener('click', () => {
     slider(1);
 });
 
+thumbnails.forEach(btn => {
+    btn.addEventListener('click', () => {
+
+    });
+});
+
 let slide = 1;
 
 function slider(n){ 
@@ -46,7 +52,11 @@ function show(n) {
     for( i = 0; i < images.length; i++){
         images[i].style.display = "none";
     }
+    for(i = 0; i < thumbnails.length; i++){
+        thumbnails[i].classList = thumbnails[i].classList.replace(" thumbnails_active", " ");
+    }
     images[slide - 1].style.display = "block";
+    thumbnails[slide - 1].classList += " thumbnails_active";
 }
 
 //Add to cart
@@ -116,5 +126,3 @@ function deleteCart(){
     checkoutBtn.remove();
     empty.style.display = "flex";
 }
-
-
