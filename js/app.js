@@ -29,16 +29,14 @@ next.addEventListener('click', () => {
     slider(1);
 });
 
-thumbnails.forEach(btn => {
-    btn.addEventListener('click', () => {
-
-    });
-});
-
 let slide = 1;
 
 function slider(n){ 
     show(slide += n);
+}
+
+function currentSlide(n){
+    show(slide = n);
 }
 
 function show(n) {
@@ -53,10 +51,11 @@ function show(n) {
         images[i].style.display = "none";
     }
     for(i = 0; i < thumbnails.length; i++){
-        thumbnails[i].classList = thumbnails[i].classList.replace(" thumbnails_active", " ");
+        thumbnails[i].classList = thumbnails[i].classList.remove("thumbnails");
     }
     images[slide - 1].style.display = "block";
-    thumbnails[slide - 1].classList += " thumbnails_active";
+    thumbnails[slide - 1].classList.add("thumbnails_active");
+    console.log(thumbnails);
 }
 
 //Add to cart
