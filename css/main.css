@@ -9,6 +9,7 @@ header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin: auto;
 }
 
 .hamburger {
@@ -298,11 +299,20 @@ header {
 }
 
 @media screen and (min-width: 768px) {
-  header {
+  .header-nav {
+    width: 750px;
     border-bottom: 1px solid #b6bcc8;
+  }
+  main {
+    width: 750px;
+    margin: auto;
   }
   .hamburger {
     display: none;
+  }
+  .avatar {
+    width: 3rem;
+    height: 3rem;
   }
   .link-container {
     display: flex;
@@ -332,7 +342,7 @@ header {
     display: none;
   }
   .logo {
-    padding: 2rem;
+    padding-right: 2rem;
   }
   .container {
     margin-top: 2rem;
@@ -343,11 +353,13 @@ header {
     width: 50%;
     overflow: hidden;
     padding: 1rem;
+    transition: all 0.3s ease;
   }
   .images-container .product-images {
     border-radius: 10px;
     width: 350px;
     height: 350px;
+    transition: all 0.3s ease;
   }
   .images-container .arrowBtn {
     display: none;
@@ -362,29 +374,39 @@ header {
     position: relative;
   }
   .images-container .images-thumbnails .thumbnails {
-    display: inline-block;
-    justify-content: space-between;
+    display: flex;
+    justify-content: center;
     align-items: center;
     width: 69px;
     height: 69px;
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    transition: all 0.3s ease;
   }
   .images-container .images-thumbnails .thumbnails img {
-    display: flex;
-    width: 69px;
-    height: 69px;
-    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
   .images-container .images-thumbnails .thumbnails_active {
-    border: 2px solid #ff7d1a;
+    border: 3px solid #ff7d1a;
     opacity: 0.3;
     display: flex;
   }
   .product-details {
     width: 50%;
     padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav {
+    width: 1000px;
+  }
+  main {
+    width: 1000px;
   }
 }
 

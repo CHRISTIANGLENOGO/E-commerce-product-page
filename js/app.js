@@ -29,15 +29,22 @@ next.addEventListener('click', () => {
     slider(1);
 });
 
+thumbnails.forEach(btn => {
+    btn.addEventListener('click', () => {
+        slide = btn.dataset.id;
+        show(slide);
+    });
+});
+
 let slide = 1;
 
 function slider(n){ 
     show(slide += n);
 }
 
-function currentSlide(n){
-    show(slide = n);
-}
+// function currentSlide(n){
+//     show(slide = n);
+// }
 
 function show(n) {
     let i;
@@ -51,11 +58,10 @@ function show(n) {
         images[i].style.display = "none";
     }
     for(i = 0; i < thumbnails.length; i++){
-        thumbnails[i].classList = thumbnails[i].classList.remove("thumbnails");
+        thumbnails[i].classList.remove("thumbnails_active");
     }
     images[slide - 1].style.display = "block";
-    thumbnails[slide - 1].classList.add("thumbnails_active");
-    console.log(thumbnails);
+    thumbnails[slide - 1].classList += " thumbnails_active";
 }
 
 //Add to cart

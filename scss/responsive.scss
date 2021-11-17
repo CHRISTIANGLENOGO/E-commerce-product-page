@@ -1,12 +1,23 @@
 @import "variable";
 
 @media screen and (min-width: 768px) {
-  header {
+  .header-nav {
+    width: 750px;
     border-bottom: 1px solid $grayishBlue;
+  }
+
+  main {
+    width: 750px;
+    margin: auto;
   }
 
   .hamburger {
     display: none;
+  }
+
+  .avatar {
+    width: 3rem;
+    height: 3rem;
   }
 
   .link-container {
@@ -43,7 +54,7 @@
   }
 
   .logo {
-    padding: 2rem;
+    padding-right: 2rem;
   }
 
   .container {
@@ -56,11 +67,13 @@
     width: 50%;
     overflow: hidden;
     padding: 1rem;
+    transition: all 0.3s ease;
 
     .product-images {
       border-radius: 10px;
       width: 350px;
       height: 350px;
+      transition: all 0.3s ease;
     }
 
     .arrowBtn {
@@ -77,25 +90,26 @@
       position: relative;
 
       .thumbnails {
-        display: inline-block;
-        justify-content: space-between;
+        display: flex;
+        justify-content: center;
         align-items: center;
         width: 69px;
         height: 69px;
         border-radius: 10px;
         overflow: hidden;
         position: relative;
+        transition: all 0.3s ease;
 
         img {
-          display: flex;
-          width: 69px;
-          height: 69px;
-          position: absolute;
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
 
       .thumbnails_active {
-        border: 2px solid $orange;
+        border: 3px solid $orange;
         opacity: 0.3;
         display: flex;
       }
@@ -105,5 +119,15 @@
   .product-details {
     width: 50%;
     padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header-nav {
+    width: 1000px;
+  }
+
+  main {
+    width: 1000px;
   }
 }
