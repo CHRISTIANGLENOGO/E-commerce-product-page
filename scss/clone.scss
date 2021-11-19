@@ -1,0 +1,136 @@
+@import "variable";
+
+.clone-card {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(29, 32, 37, 0.85);
+  z-index: 10;
+  justify-content: center;
+  align-items: center;
+
+  .clone-container {
+    position: relative;
+    width: 450px;
+    height: 550px;
+
+    .slider {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      margin: auto;
+      position: relative;
+      width: 450px;
+      height: 450px;
+
+      .close-slider {
+        position: absolute;
+        right: 0.5rem;
+        top: -2rem;
+        cursor: pointer;
+        width: 30px;
+        height: 30px;
+
+        path {
+          fill: $white;
+        }
+      }
+
+      .close-slider:hover {
+        path {
+          fill: $orange;
+        }
+      }
+
+      .slider-image {
+        border-radius: 20px;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        position: absolute;
+
+        .cl-image {
+          width: 100%;
+          height: 100%;
+          display: none;
+        }
+
+        .active {
+          display: flex;
+        }
+      }
+
+      .arrow-clone {
+        position: absolute;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        top: 50%;
+
+        .arr {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          background: $white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+        }
+
+        .arr:hover {
+          path {
+            stroke: $orange;
+          }
+        }
+
+        .cl-prev {
+          right: 25px;
+        }
+
+        .cl-next {
+          left: 25px;
+        }
+      }
+    }
+
+    .clone-thumbnails {
+      display: flex;
+      width: 100%;
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      bottom: 0;
+
+      .cl-thumbnails {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+        overflow: hidden;
+        margin: 0 10px;
+        cursor: pointer;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      .cl_active {
+        opacity: 0.6;
+        border: 3px solid $orange;
+      }
+    }
+  }
+}

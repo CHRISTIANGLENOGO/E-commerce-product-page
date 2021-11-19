@@ -19,8 +19,14 @@ closeNav.addEventListener('click', () => {
 //Image Slider for mobile
 const images = document.querySelectorAll(".images");
 const thumbnails = document.querySelectorAll(".thumbnails");
-const previous = document.querySelector("#previous");
-const next = document.querySelector("#next");
+const previous = document.querySelectorAll(".previous");
+const next = document.querySelectorAll(".next");
+const clone = document.querySelector(".clone");
+const cloneCard = document.querySelector(".clone-card");
+
+clone.addEventListener('click', () => {
+    clone.style.display = "block";
+})
 
 previous.addEventListener('click', () => {
     slider(-1);
@@ -72,9 +78,11 @@ const itemQty = document.querySelector(".itemQty");
 const addToCartBtn = document.querySelector(".addToCart");
 const cart = document.querySelector(".cart");
 const cartList = document.querySelector(".cartContainer");
+const amount = document.querySelector(".amount");
 
 let count = 0;
 let totalQty;
+let price = 125;
 
 function addCart(qty){
     totalQty = qty;
@@ -110,14 +118,17 @@ addToCartBtn.addEventListener('click', () => {
 function addList () {
     itemQty.innerText = totalQty;
     counter.innerText = 0;
-    //
-
+    // const total = document.querySelector("#total");
+    let total = price * totalQty;
+    
+    amount.innerText = `$${price.toFixed(2)} x ${totalQty} $${total.toFixed(2)}`;
     //add div
     const item = document.querySelector('.items');
     item.style.display = "flex";
 
     //Hide "your cart is empty"
-    empty.style.display = "none";
+    empty.style.visibility = "hidden";
+    count = 0;
 }
 
 const empty = document.querySelector(".empty");
@@ -129,5 +140,6 @@ deleteBtn.addEventListener('click', deleteCart);
 function deleteCart(){
     deleteBtn.parentElement.remove();
     checkoutBtn.remove();
-    empty.style.display = "flex";
+    empty.style.visibility = "visible";
+    itemQty.innerText -= totalQty;
 }

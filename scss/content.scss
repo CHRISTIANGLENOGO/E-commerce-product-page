@@ -8,7 +8,7 @@
 
 .cartContainer {
   display: none;
-  position: fixed;
+  position: absolute;
   background-color: $white;
   min-height: 250px;
   width: 350px;
@@ -17,6 +17,7 @@
   border-radius: 10px;
   margin: 10px;
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .cartText {
@@ -36,12 +37,15 @@
 
   .item1 {
     display: flex;
-    flex-direction: row;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center;
     width: 100%;
     height: 3rem;
     position: relative;
+
+    .item-detail {
+      display: flex;
+    }
 
     .itemImage {
       overflow: hidden;
@@ -53,33 +57,29 @@
       img {
         width: 100%;
       }
-
-      .delete {
-        position: relative;
-        right: 0;
-      }
     }
   }
 }
 
 .checkout {
+  position: relative;
+  bottom: -3rem;
   background-color: $orange;
   color: $white;
   border: none;
-  padding: 1rem;
+  padding: 1.2rem;
   width: 100%;
   border-radius: 10px;
 }
 
 .empty {
-  padding-top: 25%;
-  text-align: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   color: $darkGrayishBlue;
   font-weight: 700;
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  top: calc((100% - 3rem) / 2);
+  padding: 90px 0;
+  z-index: 5;
 }
 
 .productImgContainer {
@@ -95,7 +95,6 @@
 
   .images {
     width: 100%;
-    // display: none;
   }
 
   .active {
@@ -149,7 +148,7 @@
 .price-container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-content: center;
   width: 100%;
   margin: 1rem 0;
 }
@@ -201,9 +200,8 @@
   font-weight: 700;
   fill: $white;
 
-  #cart {
-    fill: currentColor;
-    color: $white;
+  svg {
+    fill: $white;
     padding: 0 0.5rem;
   }
 }

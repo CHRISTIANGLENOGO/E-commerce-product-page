@@ -14,7 +14,6 @@ header {
 }
 
 .hamburger {
-  display: flex;
   padding-right: 1rem;
 }
 
@@ -31,6 +30,7 @@ header {
 
 .cart {
   position: relative;
+  cursor: pointer;
 
   .itemQty {
     position: absolute;
@@ -50,6 +50,7 @@ header {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
+  cursor: pointer;
   img {
     width: 100%;
   }
@@ -62,7 +63,7 @@ header {
 .mobile-nav {
   right: 100%;
   position: absolute;
-  transition: all 0.5s ease-out;
+  transition: all 1s ease;
 }
 
 .mobile-nav_active {
@@ -79,7 +80,7 @@ header {
 
 #close {
   margin: 1rem 0 2rem 35%;
-  transition: all 0.5s ease-out;
+  transition: all 1s ease;
 }
 
 .mobile-nav a {
