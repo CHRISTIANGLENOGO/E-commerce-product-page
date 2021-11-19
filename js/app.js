@@ -19,18 +19,13 @@ closeNav.addEventListener('click', () => {
 //Image Slider for mobile
 const images = document.querySelectorAll(".images");
 const thumbnails = document.querySelectorAll(".thumbnails");
-const previous = document.querySelectorAll(".previous");
-const next = document.querySelectorAll(".next");
-const clone = document.querySelector(".clone");
-const cloneCard = document.querySelector(".clone-card");
-
-clone.addEventListener('click', () => {
-    clone.style.display = "block";
-})
+const previous = document.querySelector("#previous");
+const next = document.querySelector("#next");
 
 previous.addEventListener('click', () => {
     slider(-1);
 });
+
 next.addEventListener('click', () => {
     slider(1);
 });
@@ -48,10 +43,6 @@ function slider(n){
     show(slide += n);
 }
 
-// function currentSlide(n){
-//     show(slide = n);
-// }
-
 function show(n) {
     let i;
     if( n > images.length) {
@@ -68,6 +59,66 @@ function show(n) {
     }
     images[slide - 1].style.display = "block";
     thumbnails[slide - 1].classList += " thumbnails_active";
+}
+
+//Clone Image Slider. This will appear if Big Image Slider will be click.
+const cloneImages = document.querySelectorAll(".cl-image");
+const cloneThumbnails = document.querySelectorAll(".cl-thumbnails");
+const clonePrev = document.querySelector(".cl-prev");
+const cloneNext = document.querySelector(".cl-next");
+const cloneClose = document.querySelector(".close-slider");
+const cloneOpen = document.querySelector(".clone");
+const cloneCard = document.querySelector(".clone-card");
+
+let clone = true;
+
+cloneOpen.addEventListener('click', () => {
+    cloneCard.style.display = "flex";
+    clone = false;
+});
+
+cloneClose.addEventListener('click', () => {
+    cloneCard.style.display = "flex";
+    clone = true;
+});
+
+
+clonePrev.addEventListener('click', () => {
+    cloneSlider(-1);
+});
+cloneNext.addEventListener('click', () => {
+    cloneSlider(1);
+});
+
+cloneThumbnails.forEach(btn => {
+    btn.addEventListener('click', () => {
+        cloneSlide = btn.dataset.id;
+        cloneShow(cloneSlide);
+    });
+});
+
+let cloneSlide = 1;
+
+function cloneSlider(n){ 
+    cloneShow(cloneSlide += n);
+}
+
+function cloneShow(n) {
+    let i;
+    if( n > cloneImages.length) {
+        cloneSlide = 1;
+    }
+    if( n < 1 ) {
+        cloneSlide = cloneImages.length;
+    }
+    for( i = 0; i < cloneImages.length; i++){
+        cloneImages[i].style.display = "none";
+    }
+    for(i = 0; i < cloneThumbnails.length; i++){
+        cloneThumbnails[i].classList.remove("cl_active");
+    }
+    cloneImages[cloneSlide - 1].style.display = "block";
+    cloneThumbnails[cloneSlide - 1].classList += " cl_active";
 }
 
 //Add to cart
