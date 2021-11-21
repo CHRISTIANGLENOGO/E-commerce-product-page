@@ -45,8 +45,10 @@
     padding-right: 2rem;
   }
   .container {
-    margin-top: 2rem;
+    padding-top: 4rem;
     flex-direction: row;
+    width: 90%;
+    margin: auto;
   }
   .images-container {
     border-radius: 10px;
@@ -60,6 +62,7 @@
     width: 350px;
     height: 350px;
     transition: all 0.3s ease;
+    pointer-events: auto;
   }
   .images-container .arrowBtn {
     display: none;
@@ -96,12 +99,19 @@
     display: flex;
   }
   .product-details {
-    width: 50%;
+    width: 350px;
     padding: 1rem;
   }
   .price-container {
     flex-direction: column;
     justify-content: left;
+    margin: 2rem 0;
+  }
+  .count-cart {
+    display: flex;
+  }
+  .count-cart .counter-container {
+    margin-right: 20px;
   }
 }
 

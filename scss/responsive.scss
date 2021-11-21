@@ -58,8 +58,10 @@
   }
 
   .container {
-    margin-top: 2rem;
+    padding-top: 4rem;
     flex-direction: row;
+    width: 90%;
+    margin: auto;
   }
 
   .images-container {
@@ -74,6 +76,7 @@
       width: 350px;
       height: 350px;
       transition: all 0.3s ease;
+      pointer-events: auto;
     }
 
     .arrowBtn {
@@ -117,13 +120,22 @@
   }
 
   .product-details {
-    width: 50%;
+    width: 350px;
     padding: 1rem;
   }
 
   .price-container {
     flex-direction: column;
     justify-content: left;
+    margin: 2rem 0;
+  }
+
+  .count-cart {
+    display: flex;
+
+    .counter-container {
+      margin-right: 20px;
+    }
   }
 }
 

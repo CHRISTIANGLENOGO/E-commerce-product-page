@@ -121,7 +121,8 @@
 }
 
 .clone-card .clone-container .clone-thumbnails .cl-thumbnails img {
-  width: 100%;
+  width: 70px;
+  height: 70px;
 }
 
 .clone-card .clone-container .clone-thumbnails .cl_active {

@@ -78,10 +78,9 @@ cloneOpen.addEventListener('click', () => {
 });
 
 cloneClose.addEventListener('click', () => {
-    cloneCard.style.display = "flex";
+    cloneCard.style.display = "none";
     clone = true;
 });
-
 
 clonePrev.addEventListener('click', () => {
     cloneSlider(-1);
@@ -167,6 +166,7 @@ addToCartBtn.addEventListener('click', () => {
 });
 
 function addList () {
+    if(count === 0) return;
     itemQty.innerText = totalQty;
     counter.innerText = 0;
     // const total = document.querySelector("#total");
