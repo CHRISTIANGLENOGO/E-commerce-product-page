@@ -7,7 +7,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
     padding: 1rem;
     margin: auto;
 
@@ -33,16 +32,18 @@ header {
       .cart {
         position: relative;
         cursor: pointer;
+        width: 22px;
+        height: 20px;
 
         .itemQty {
           position: absolute;
           top: -8px;
-          right: 0;
-          font-size: 12px;
+          right: -3px;
+          font-size: 10px;
           font-weight: 700;
           background: $orange;
           color: $white;
-          border-radius: 3px;
+          border-radius: 4px;
           padding: 0 4px;
         }
       }

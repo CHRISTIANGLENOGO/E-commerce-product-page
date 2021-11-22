@@ -50,39 +50,43 @@
     </nav>
   </header>
   <nav class="mobile-nav">
-    <img id="close" src="/images/icon-close.svg" alt="close">
-    <a href="#">Collection</a>
-    <a href="#">Men</a>
-    <a href="#">Women</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
+    <div class="mobile-con">
+      <div id="close">
+        <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+      </div>
+      <a href="#">Collection</a>
+      <a href="#">Men</a>
+      <a href="#">Women</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>  
+    </div>
   </nav>
   <main>
-    <div class="container">
-      <!--Cart-->
-      <div class="cartContainer">
-        <h3 class="cartText">Cart</h3>
-        <div class="items">
-          <div class="item1">
-            <div class="item-detail">
-              <div class="itemImage">
-                <img src="/images/image-product-1-thumbnail.jpg" alt="Image 1">
-              </div>
-              <div>
-                <p>Fall Limited Edition Sneakers</p>
-                <div class="amount">$125.00 x 3 
-                  <span id="total" style="font-weight: 700;">total</span>
+          <!--Cart-->
+          <div class="cartContainer">
+            <h3 class="cartText">Cart</h3>
+            <div class="items">
+              <div class="item1">
+                <div class="item-detail">
+                  <div class="itemImage">
+                    <img src="/images/image-product-1-thumbnail.jpg" alt="Image 1">
+                  </div>
+                  <div>
+                    <p>Fall Limited Edition Sneakers</p>
+                    <div class="amount">$125.00 x 3 
+                      <span id="total" style="font-weight: 700;">total</span>
+                    </div>
+                  </div>
                 </div>
+                <div class="delete"><img src="/images/icon-delete.svg" alt="delete"></div>
               </div>
+              <button class="checkout">Checkout</button>
             </div>
-            <div class="delete"><img src="/images/icon-delete.svg" alt="delete"></div>
+            <p class="empty emp_active">Your cart is empty.</p>
           </div>
-          <button class="checkout">Checkout</button>
-        </div>
-        <p class="empty emp_active">Your cart is empty.</p>
-      </div>
-      <!--End of Cart-->
-      <!-- Product Images and thumbnails -->
+          <!--End of Cart--> 
+          <!-- Product Images and thumbnails -->
+    <div class="container">
       <div class="images-container">
         <div class="productImgContainer">
           <div class="product-images clone">
