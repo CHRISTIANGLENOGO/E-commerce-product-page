@@ -123,32 +123,31 @@ function cloneShow(n) {
 //Add to cart
 const minus = document.querySelector("#minus");
 const plus = document.querySelector("#plus");
-const counter = document.querySelector("#counter");
+const counter = document.querySelector("#count");
 const itemQty = document.querySelector(".itemQty");
 const addToCartBtn = document.querySelector(".addToCart");
 const cart = document.querySelector(".cart");
-const cartList = document.querySelector(".cartContainer");
+const cartList = document.querySelector(".cart-card");
 const amount = document.querySelector(".amount");
 
 let count = 0;
-let totalQty;
+let totalItem;
 let price = 125;
 
-function addCart(qty){
-    totalQty = qty;
-    counter.innerText = totalQty;
-}
-
 plus.addEventListener('click', () => {
-    addCart(count++);
+    addCart(1);
 });
 
 minus.addEventListener('click', () => {
-    addCart(count--);
-    if(count <= 1){
-        count = 0;
-    }
+    if(count === 0) return;
+    addCart(-1);
 });
+
+function addCart(qty){
+    count += qty;
+    totalItem = count;
+    counter.innerText = totalItem;
+}
 
 let cartIcon = false;
 cart.addEventListener('click', () => {
@@ -167,12 +166,12 @@ addToCartBtn.addEventListener('click', () => {
 
 function addList () {
     if(count === 0) return;
-    itemQty.innerText = totalQty;
+    itemQty.innerText = totalItem;
     counter.innerText = 0;
     // const total = document.querySelector("#total");
-    let total = price * totalQty;
+    let total = price * totalItem;
     
-    amount.innerText = `$${price.toFixed(2)} x ${totalQty} $${total.toFixed(2)}`;
+    amount.innerText = `$${price.toFixed(2)} x ${totalItem} $${total.toFixed(2)}`;
     //add div
     const item = document.querySelector('.items');
     item.style.display = "flex";
@@ -192,5 +191,5 @@ function deleteCart(){
     deleteBtn.parentElement.remove();
     checkoutBtn.remove();
     empty.style.visibility = "visible";
-    itemQty.innerText -= totalQty;
+    itemQty.innerText -= totalItem;
 }

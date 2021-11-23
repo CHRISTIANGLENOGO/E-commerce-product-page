@@ -1,73 +1,77 @@
 @media screen and (min-width: 768px) {
-  .header-nav {
+  header .header-nav {
     width: 750px;
     border-bottom: 1px solid #b6bcc8;
+  }
+  header .header-nav .leftHeader .hamburger {
+    display: none;
+  }
+  header .header-nav .leftHeader .logo {
+    padding-right: 2rem;
+  }
+  header .header-nav .leftHeader .link-container {
+    display: flex;
+  }
+  header .header-nav .leftHeader .link-container .links {
+    display: flex;
+    list-style: none;
+    height: 18.4px;
+  }
+  header .header-nav .leftHeader .link-container .links li {
+    padding-left: 1rem;
+  }
+  header .header-nav .leftHeader .link-container .links li a {
+    text-decoration: none;
+    color: #68707d;
+  }
+  header .header-nav .leftHeader .link-container .links li a:hover {
+    color: black;
+  }
+  header .header-nav .leftHeader .link-container .links li a:hover::after {
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: #ff7d1a;
+    display: flex;
+    position: relative;
+    bottom: -1.8rem;
+  }
+  header .header-nav .rightHeader .avatar {
+    width: 3rem;
+    height: 3rem;
+    margin-left: 3rem;
+  }
+  .mobile-nav {
+    display: none;
   }
   main {
     width: 750px;
     margin: auto;
   }
-  .hamburger {
-    display: none;
-  }
-  .avatar {
-    width: 3rem;
-    height: 3rem;
-  }
-  .link-container {
-    display: flex;
-  }
-  .link-container .links {
-    display: flex;
-    list-style: none;
-    height: 18.4px;
-  }
-  .link-container .links li {
-    padding-left: 1rem;
-  }
-  .link-container .links li a {
-    text-decoration: none;
-    color: #68707d;
-  }
-  .link-container .links li a:hover::after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: #ff7d1a;
-    display: flex;
-    position: relative;
-    bottom: -1.9rem;
-  }
-  .mobile-nav {
-    display: none;
-  }
-  .logo {
-    padding-right: 2rem;
-  }
   .container {
     padding-top: 4rem;
     flex-direction: row;
-    width: 90%;
+    width: 100%;
     margin: auto;
   }
-  .images-container {
+  .container .image-container {
     border-radius: 10px;
     width: 50%;
     overflow: hidden;
     padding: 1rem;
     transition: all 0.3s ease;
   }
-  .images-container .product-images {
+  .container .image-container .image-slider .slider-card {
     border-radius: 10px;
     width: 350px;
     height: 350px;
     transition: all 0.3s ease;
     pointer-events: auto;
   }
-  .images-container .arrowBtn {
+  .container .image-container .image-slider .arrow {
     display: none;
   }
-  .images-container .images-thumbnails {
+  .container .image-container .thumbnail {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -76,7 +80,7 @@
     overflow: hidden;
     position: relative;
   }
-  .images-container .images-thumbnails .thumbnails {
+  .container .image-container .thumbnail .thumbnails {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -87,39 +91,39 @@
     position: relative;
     transition: all 0.3s ease;
   }
-  .images-container .images-thumbnails .thumbnails img {
+  .container .image-container .thumbnail .thumbnails img {
     display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-  .images-container .images-thumbnails .thumbnails_active {
+  .container .image-container .thumbnail .thumbnails_active {
     border: 3px solid #ff7d1a;
     opacity: 0.3;
     display: flex;
   }
-  .product-details {
+  .container .product-details {
     width: 350px;
     padding: 1rem;
   }
-  .price-container {
+  .container .product-details .price {
     flex-direction: column;
     justify-content: left;
     margin: 2rem 0;
   }
-  .count-cart {
+  .container .product-details .counter-card {
     display: flex;
   }
-  .count-cart .counter-container {
+  .container .product-details .counter-card .counter {
     margin-right: 20px;
   }
 }
 
 @media screen and (min-width: 1024px) {
-  .header-nav {
-    width: 1000px;
+  header .header-nav {
+    width: 950px;
   }
   main {
-    width: 1000px;
+    width: 950px;
   }
 }
