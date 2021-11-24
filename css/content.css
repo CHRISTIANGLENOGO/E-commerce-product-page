@@ -101,6 +101,7 @@
 }
 
 .container .image-container .image-slider .slider-card .images {
+  display: none;
   width: 100%;
 }
 

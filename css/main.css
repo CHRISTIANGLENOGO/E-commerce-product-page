@@ -216,6 +216,7 @@ header .header-nav .rightHeader .avatar:hover {
 }
 
 .container .image-container .image-slider .slider-card .images {
+  display: none;
   width: 100%;
 }
 
@@ -625,4 +626,5 @@ header .header-nav .rightHeader .avatar:hover {
 body {
   font-size: 16px;
   font-weight: 400;
+  font-family: "Kumbh Sans", sans-serif;
 }
